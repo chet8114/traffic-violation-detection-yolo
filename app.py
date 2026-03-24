@@ -104,7 +104,7 @@ st.markdown("""
 # ---------------- LOAD MODELS ----------------
 @st.cache_resource
 def load_models():
-    helmet = YOLO("runs/detect/train/weights/best.pt")
+    helmet = YOLO("models/best.pt")
     general = YOLO("yolov8n.pt")
     return helmet, general
 
