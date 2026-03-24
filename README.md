@@ -77,15 +77,12 @@ These results indicate good detection capability for helmet violations under var
 ```
 traffic_violation_detector
 │
-├── final1.py
+├── app.py
 ├── README.md
 ├── requirements.txt
 │
-├── runs
-│   └── detect
-│       └── train
-│           └── weights
-│               └── best.pt
+├── models
+│   └──best.py
 │
 └── yolov8n.pt
 ```
