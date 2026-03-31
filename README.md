@@ -245,13 +245,5 @@ A **custom YOLOv8 model** detects riders labeled as **Without Helmet**.
 
 ---
 
-# ⚠️ Note
-
-Model weights are **not included in this repository** because of their large size.
-They are hosted on **Hugging Face** and must be downloaded before running the project.
-
-Also, the **virtual environment (`venv/`) should not be pushed to GitHub**.
-
----
 
 
