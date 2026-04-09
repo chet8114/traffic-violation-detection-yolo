@@ -1,30 +1,65 @@
+Nicee — deploying your app on Streamlit is a big upgrade for your project profile 🚀
+Since now your project is **live**, your README should highlight the **Live Demo first** (this makes recruiters instantly interested).
+
+Here’s your **updated professional GitHub README.md** with your Streamlit deployment added, structure improved, and small corrections fixed 👇
+
+---
+
 # 🚦 Traffic Violation Detection System
 
-An **AI-powered Traffic Violation Detection System** built using **YOLOv8 and Streamlit**.
-This application detects traffic rule violations from **images and videos** using deep learning.
+An **AI-powered Traffic Violation Detection System** built using **YOLOv8 and Streamlit** that detects traffic rule violations from **images and videos** using deep learning.
 
-## 🚨 Violations Detected
+🔗 **Live Demo (Try the App Here):**
+[https://traffic-violation-detection-yolo-chethan.streamlit.app/](https://traffic-violation-detection-yolo-chethan.streamlit.app/)
 
-* ❌ **No Helmet Detection** – Detects riders without helmets using a **custom-trained YOLOv8 model**.
-* 👥 **Triple Riding Detection** – Detects when more than **two persons ride on a motorcycle**.
+This application allows users to upload traffic images or videos and automatically detect violations through an interactive web interface.
 
-The application provides an **interactive Streamlit interface** where users can upload traffic images or videos to check for violations.
+---
+
+# 🚨 Violations Detected
+
+### ❌ No Helmet Detection
+
+Detects riders without helmets using a **custom-trained YOLOv8 model**
+
+### 👥 Triple Riding Detection
+
+Detects when more than **two persons ride on a motorcycle**
+
+---
+
+# 🌐 Live Application Features
+
+Users can:
+
+✔ Upload traffic images
+✔ Upload traffic videos
+✔ Detect violations instantly
+✔ View bounding box predictions
+✔ Receive violation alerts
+✔ See processed violation frames
+
+No installation required — works directly in browser via Streamlit deployment.
 
 ---
 
 # 🧠 Models Used
 
-This project uses **two YOLO models**.
+This project uses **two YOLO models**
+
+---
 
 ## 1️⃣ Custom Helmet Detection Model
 
-A YOLOv8 model trained specifically to detect **riders without helmets**.
+A YOLOv8 model trained specifically to detect:
 
-Download the trained model from Hugging Face:
+* Riders **without helmets**
 
-https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt
+Download model from Hugging Face:
 
-After downloading, place the model inside:
+[https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt](https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt)
+
+Place inside:
 
 ```
 runs/detect/train/weights/best.pt
@@ -36,10 +71,10 @@ runs/detect/train/weights/best.pt
 
 Used for detecting:
 
-* **Persons**
-* **Motorcycles**
+* Persons
+* Motorcycles
 
-This model helps detect **triple riding violations**.
+This enables **triple riding violation detection**
 
 Model file:
 
@@ -47,28 +82,23 @@ Model file:
 yolov8n.pt
 ```
 
-It will automatically download when running the code using Ultralytics.
+It downloads automatically when running using Ultralytics.
 
 ---
 
 # 📊 Model Performance
 
-The **YOLOv8 helmet detection model** was trained and evaluated on a custom dataset.
-Key evaluation metrics obtained during validation are shown below:
+Helmet Detection Model Evaluation Metrics:
 
-* **Precision**: 0.7970
-* **Recall**: 0.8108
-* **F1-Score**: 0.8038
-* **mAP@0.5**: 0.8279
-* **mAP@0.5:0.95**: 0.4762
+| Metric       | Score  |
+| ------------ | ------ |
+| Precision    | 0.7970 |
+| Recall       | 0.8108 |
+| F1 Score     | 0.8038 |
+| mAP@0.5      | 0.8279 |
+| mAP@0.5:0.95 | 0.4762 |
 
-The **F1-score** is calculated as:
-
-```
-F1 = 2 × (Precision × Recall) / (Precision + Recall)
-```
-
-These results indicate good detection capability for helmet violations under varying traffic conditions.
+These results indicate strong detection performance under varied traffic conditions.
 
 ---
 
@@ -82,16 +112,16 @@ traffic_violation_detector
 ├── requirements.txt
 │
 ├── models
-│   └──best.py
+│   └── best.pt
 │
 └── yolov8n.pt
 ```
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Installation (Run Locally)
 
-## 1️⃣ Clone the Repository
+## 1️⃣ Clone Repository
 
 ```
 git clone https://github.com/YOUR_USERNAME/traffic_violation_detector.git
@@ -100,9 +130,9 @@ cd traffic_violation_detector
 
 ---
 
-# 🐍 Create Virtual Environment
+## 2️⃣ Create Virtual Environment
 
-### Windows
+Windows:
 
 ```
 python -m venv venv
@@ -110,57 +140,43 @@ python -m venv venv
 
 ---
 
-# ▶️ Activate Virtual Environment
+## 3️⃣ Activate Environment
 
-### PowerShell
+PowerShell:
 
 ```
 venv\Scripts\activate
 ```
 
-### Command Prompt
+Command Prompt:
 
 ```
 venv\Scripts\activate.bat
 ```
 
-After activation, you should see:
-
-```
-(venv)
-```
-
-in your terminal.
-
 ---
 
-# 📦 Install Dependencies
-
-```
-pip install streamlit ultralytics numpy
-```
-
-You may also generate a requirements file using:
-
-```
-pip freeze > requirements.txt
-```
-
-and install dependencies with:
+## 4️⃣ Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
+Or manually:
+
+```
+pip install streamlit ultralytics numpy opencv-python
+```
+
 ---
 
-# 🧠 Download Model
+## 5️⃣ Download Helmet Detection Model
 
-Download the trained helmet detection model from Hugging Face:
+Download:
 
-https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt
+[https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt](https://huggingface.co/spaces/chethankarnati/helmet-detection-demo/blob/main/best.pt)
 
-Place it inside:
+Place inside:
 
 ```
 runs/detect/train/weights/
@@ -174,42 +190,45 @@ runs/detect/train/weights/best.pt
 
 ---
 
-# ▶️ Run the Application
-
-Start the Streamlit application:
+# ▶️ Run Application Locally
 
 ```
-streamlit run final.py
+streamlit run app.py
 ```
 
-After running the command, the application will open automatically in your browser.
+Then open browser:
+
+```
+http://localhost:8501
+```
 
 ---
 
-# 📷 Image Detection
+# 📷 Image Detection Workflow
 
-1. Select **Image Mode**
-2. Upload a traffic image
-3. The system detects:
+1️⃣ Select **Image Mode**
+2️⃣ Upload traffic image
+3️⃣ System detects:
 
-   * No Helmet riders
-   * Triple Riding violations
-4. Results are displayed with bounding boxes.
+* No helmet riders
+* Triple riding violations
+
+4️⃣ Results displayed with bounding boxes
 
 ---
 
-# 🎥 Video Detection
+# 🎥 Video Detection Workflow
 
-1. Select **Video Mode**
-2. Upload a traffic video
-3. The system processes video frames
-4. If violations occur, the frame containing the violation is displayed.
+1️⃣ Select **Video Mode**
+2️⃣ Upload traffic video
+3️⃣ Frames processed automatically
+4️⃣ Violation frames highlighted
 
-The system also shows:
+Displays:
 
 * Violation alerts
-* Processing time
-* Detected frames
+* Detection output frames
+* Processing feedback
 
 ---
 
@@ -217,13 +236,28 @@ The system also shows:
 
 ## No Helmet Detection
 
-A **custom YOLOv8 model** detects riders labeled as **Without Helmet**.
+Custom YOLOv8 model detects:
+
+```
+Without Helmet
+```
+
+label directly from trained dataset.
+
+---
 
 ## Triple Riding Detection
 
-1. YOLO detects **persons and motorcycles**.
-2. The system checks for **bounding box overlap**.
-3. If **more than two persons overlap with a motorcycle**, it is marked as **Triple Riding**.
+Detection steps:
+
+1. Detect persons and motorcycles using YOLOv8
+2. Check bounding box overlap
+3. If **more than two persons overlap with a motorcycle**
+4. Mark as:
+
+```
+Triple Riding Violation
+```
 
 ---
 
@@ -232,18 +266,19 @@ A **custom YOLOv8 model** detects riders labeled as **Without Helmet**.
 * Python
 * Streamlit
 * YOLOv8 (Ultralytics)
+* OpenCV
 * NumPy
 
 ---
 
 # 🚀 Future Improvements
 
+Planned upgrades:
+
 * Number plate detection
-* Real-time CCTV monitoring
-* Automated traffic violation reporting
-* Integration with smart traffic systems
+* Real-time CCTV integration
+* Automatic challan generation system
+* Smart traffic signal integration
+* Cloud-based violation monitoring dashboard
 
 ---
-
-
-
